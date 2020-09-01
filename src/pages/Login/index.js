@@ -2,35 +2,21 @@ import React from "react";
 import { Container } from "../../global-styles";
 import logo from "../../assets/img/logo.png";
 import { Link } from "react-router-dom";
+import LoginForm from './loginForm'
 
 const Login = () => (
-  <div>
-    <Container login>
-      <section>
-        <div>
-          <img src={logo} alt="Logo"></img>
-        </div>
-
-        <form>
-          <label>EMAIL</label>
-          <input type="text" />
-          <label>SENHA</label>
-          <input type="password" />
-
-          <Link to="/intro">
-            <div>
-              <button>LOGIN</button>
-            </div>
-          </Link>
-        </form>
-
-        <footer>
-          Ainda não possui uma conta ?
+  <Container login>
+    <section>
+      <aside>
+        <img src={logo} alt="Logo"></img>
+      </aside>
+      <LoginForm />
+      <footer>
+        Ainda não possui uma conta ?
         <Link to="/register">Não tenho cadastro</Link>
-        </footer>
-      </section>
-    </Container>
-  </div>
+      </footer>
+    </section>
+  </Container>
 )
 
 export default Login;

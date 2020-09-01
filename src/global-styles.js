@@ -42,7 +42,7 @@ export const Wrapper = styled.div`
   div {
     display: flex;
     justify-content: ${(props) =>
-      props.imgcontainer ? "center" : "space-between"};
+    props.imgcontainer ? "center" : "space-between"};
     div {
       padding-top: 50px;
     }
@@ -93,7 +93,6 @@ export const Container = styled.section`
       color: #ffffff;
     }
     input {
-      margin-bottom: 2em;
       height: 40px;
       border-radius: 8px;
       border: none;
@@ -102,6 +101,12 @@ export const Container = styled.section`
       color: #ffffff;
       padding: 0 15px;
       font-size: 16px;
+      width: 100%
+    }
+    h4 {
+      padding-top: 5px;
+      color: red;
+      font-weight: bold;
     }
       button {
         width: 100%;
@@ -119,11 +124,18 @@ export const Container = styled.section`
         text-transform: uppercase;
       }
     }
+    div {
+      margin-bottom: 15px;
+    }
   }
   footer {
     margin-top: auto;
-    background: red;
   };
+  aside {
+   display: flex;
+   justify-content: center;
+   padding: 3em 3em;
+  }
 `;
 
 export const Topic = styled.div`
