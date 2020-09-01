@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, EllipseBackground, Topic } from "../global-styles";
+import { Container, EllipseBackground, Topic } from "../../global-styles";
 
 export default class SelectTopics extends Component {
   render() {

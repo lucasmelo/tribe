@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container } from "../global-styles";
+import { Container } from "../../global-styles";
 
 export default class EditProfile extends Component {
   render() {
