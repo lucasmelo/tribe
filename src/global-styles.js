@@ -42,7 +42,7 @@ export const Wrapper = styled.div`
   div {
     display: flex;
     justify-content: ${(props) =>
-      props.imgcontainer ? "center" : "space-between"};
+    props.imgcontainer ? "center" : "space-between"};
     div {
       padding-top: 50px;
     }
@@ -58,7 +58,7 @@ export const Container = styled.section`
   justify-content: center;
   padding: 50px 50px 0 50px;
   height: ${(props) =>
-    props.login || props.intro || props.select || props.edit
+    props.login || props.profile
       ? "100vh"
       : "initial"};
     h1 {
@@ -93,7 +93,6 @@ export const Container = styled.section`
       color: #ffffff;
     }
     input {
-      margin-bottom: 2em;
       height: 40px;
       border-radius: 8px;
       border: none;
@@ -102,6 +101,12 @@ export const Container = styled.section`
       color: #ffffff;
       padding: 0 15px;
       font-size: 16px;
+      width: 100%
+    }
+    h4 {
+      padding-top: 5px;
+      color: red;
+      font-weight: bold;
     }
       button {
         width: 100%;
@@ -119,11 +124,34 @@ export const Container = styled.section`
         text-transform: uppercase;
       }
     }
+    div {
+      margin-bottom: 15px;
+    }
   }
   footer {
-    margin-top: auto;
-    background: red;
+    display: flex;
+    text-align: center;
+    margin-top: 5em;
+    margin-bottom: 2em;
+    justify-content: ${(props) =>
+    props.register
+      ? "center"
+      : "initial"};;
+    flex-direction:  ${(props) =>
+    props.login
+      ? "column"
+      : "row"};
+    color: #E5E5E5;
+    a {
+      color: #E5E5E5;
+      
+    }
   };
+  aside {
+   display: flex;
+   justify-content: center;
+   padding: 3em 3em;
+  }
 `;
 
 export const Topic = styled.div`

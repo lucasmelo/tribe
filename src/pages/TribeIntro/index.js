@@ -3,10 +3,9 @@ import {
   Container,
   EllipseBackground,
   Wrapper,
-  CircleButton,
-} from "../global-styles";
-import logoArt from "../assets/img/logo-art.png";
-import buttonNextSide from "../assets/img/button-next-side.png";
+} from "../../global-styles";
+import logoArt from "../../assets/img/logo-art.png";
+import buttonNextSide from "../../assets/img/button-next-side.png";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
