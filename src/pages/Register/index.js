@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
 import RegisterForm from './registerForm'
 
-const Register = ({ login }) => (
+const Register = ({ user }) => (
   <div>
     <Container register>
       <section>
@@ -16,14 +16,10 @@ const Register = ({ login }) => (
         <footer>
           Já tem uma conta ?<Link to="/login">Faça login</Link>
         </footer>
+
       </section>
     </Container>
   </div>
 );
 
-function mapStateToProps(state) {
-  const { loginReducer } = state
-  return { login: loginReducer }
-}
-
-export default connect(mapStateToProps)(Register) 
+export default connect()(Register) 

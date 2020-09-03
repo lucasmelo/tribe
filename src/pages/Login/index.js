@@ -3,6 +3,7 @@ import { Container } from "../../global-styles";
 import logo from "../../assets/img/logo.png";
 import { Link } from "react-router-dom";
 import LoginForm from './loginForm'
+import { connect } from 'react-redux'
 
 const Login = () => (
   <Container login>
@@ -19,4 +20,4 @@ const Login = () => (
   </Container>
 )
 
-export default Login;
+export default connect()(Login);

@@ -23,7 +23,8 @@ const required = v => {
     return undefined
 }
 
-const RegisterForm = ({ handleSubmit }) => (
+let RegisterForm = ({ handleSubmit, username }) => (
+
     <Form onSubmit={handleSubmit(submit)}>
         <div>
             <Field name="name" type="text" component={renderField} validate={required} label="nome" />
@@ -46,16 +47,20 @@ const RegisterForm = ({ handleSubmit }) => (
         </div>
 
         <div>
-            <Field name="password-repeated" type="password" component={renderField} validate={required} label="digite a senha novamente" />
+            <Field name="password_repeated" type="password" component={renderField} validate={required} label="digite a senha novamente" />
         </div>
 
         <div>
             <button type="submit">Cadastrar</button>
         </div>
+
     </Form>
 );
 
-export default reduxForm({
+RegisterForm = reduxForm({
     form: 'registerForm',
     onSubmit,
 })(RegisterForm);
+
+
+export default RegisterForm

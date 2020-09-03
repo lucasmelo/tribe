@@ -58,7 +58,7 @@ export const Container = styled.section`
   justify-content: center;
   padding: 50px 50px 0 50px;
   height: ${(props) =>
-    props.login || props.intro || props.select || props.edit
+    props.login || props.profile
       ? "100vh"
       : "initial"};
     h1 {
@@ -129,7 +129,23 @@ export const Container = styled.section`
     }
   }
   footer {
-    margin-top: auto;
+    display: flex;
+    text-align: center;
+    margin-top: 5em;
+    margin-bottom: 2em;
+    justify-content: ${(props) =>
+    props.register
+      ? "center"
+      : "initial"};;
+    flex-direction:  ${(props) =>
+    props.login
+      ? "column"
+      : "row"};
+    color: #E5E5E5;
+    a {
+      color: #E5E5E5;
+      
+    }
   };
   aside {
    display: flex;

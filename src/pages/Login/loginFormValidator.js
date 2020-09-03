@@ -1,23 +1,20 @@
-import React from 'react'
 import { SubmissionError } from 'redux-form'
-import { Redirect } from 'react-router-dom';
+import { Creators } from '../../redux/ducks/login'
 
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+// const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
-const Submit = (values) => {
+const Submit = (values, dispatch) => {
 
-    return sleep(1000) // simulate server latency
-        .then(() => {
-            if (!['john', 'paul', 'george', 'ringo'].includes(values.email)) {
-                throw new SubmissionError({ email: 'Usuário incorreto', _error: 'Login failed!' })
-            }
-            else if (values.password !== 'redux-form') {
-                throw new SubmissionError({ password: 'Senha incorreta', _error: 'Login failed!' })
-            }
-            else {
-                return <Redirect to="/intro/" />
-            }
-        })
+    if (!['tribe@tribe.com'].includes(values.email)) {
+        throw new SubmissionError({ email: 'Usuário incorreto', _error: 'Login failed!' })
+    }
+    else if (values.password !== 'tribe') {
+        throw new SubmissionError({ password: 'Senha incorreta', _error: 'Login failed!' })
+    }
+    else {
+        dispatch(Creators.Login({ type: 'USER_LOGIN', values }))
+    }
+
 }
 
 export default Submit;

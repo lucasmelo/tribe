@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
-import loginReducer from "./loginReducer";
-import registerReducer from "./registerReducer";
+import login from "./login";
+import register from "./register";
 import { reducer as formReducer } from 'redux-form'
 
 export default combineReducers({
-    loginReducer,
-    registerReducer,
+    login,
+    register,
     form: formReducer
 });

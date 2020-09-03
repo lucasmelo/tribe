@@ -2,16 +2,17 @@ import React from "react";
 import { Background } from "./global-styles";
 import Routes from "./routes";
 import { Provider } from 'react-redux';
-import store from './redux/store'
+import { store, persistor } from './redux/store'
+import { PersistGate } from 'redux-persist/integration/react'
 
-function App() {
-  return (
-    <Provider store={store}>
+const App = () => (
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
       <Background>
         <Routes />
       </Background>
-    </Provider>
-  );
-}
+    </PersistGate>
+  </Provider>
+);
 
 export default App;
